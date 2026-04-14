@@ -29,7 +29,8 @@ const NavBar = () => {
 
   return (
     <div className="bg-[#f3f3f3] border-b border-gray-200 relative z-50">
-      <div className="max-w-400 mx-auto px-6 py-3 flex items-center justify-between">
+
+      <div className="max-w-400 mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
 
         {/* LOGO */}
         <div className="text-[20px] flex items-center gap-0.5">
@@ -37,8 +38,8 @@ const NavBar = () => {
           <span className="text-green-700 font-bold tracking-wide">Keeper</span>
         </div>
 
-        {/* DESKTOP MENU */}
-        <div className="hidden min-[426px]:flex items-center gap-2 bg-white p-1 rounded-xl shadow-sm">
+        {/* DESKTOP MENU (ONLY md and above) */}
+        <div className="hidden md:flex items-center gap-2 bg-white p-1 rounded-xl shadow-sm">
           {navItems.map((item) => {
             const isActive = location.pathname === item.path;
 
@@ -46,9 +47,8 @@ const NavBar = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`flex items-center gap-2 px-5 py-2 rounded-lg text-[14px] font-medium transition-all duration-200
-                ${isActive
-                    ? "bg-green-800 text-white shadow" : "text-gray-600 hover:bg-gray-100"}`} >
+                className={`flex items-center gap-2 px-4 lg:px-5 py-2 rounded-lg text-[14px] font-medium transition-all duration-200
+                ${ isActive ? "bg-green-800 text-white shadow" : "text-gray-600 hover:bg-gray-100" }`} >
                 <span className="text-[16px]">{item.icon}</span>
                 {item.name}
               </Link>
@@ -56,35 +56,38 @@ const NavBar = () => {
           })}
         </div>
 
-        {/* HAMBURGER */}
-        <div ref={menuRef} className="block min-[426px]:hidden relative">
+        {/* HAMBURGER (Mobile + Tablet only) */}
+        <div ref={menuRef} className="md:hidden relative">
+
           <button
-            onClick={() => setMenuOpen(!menuOpen)} className="text-2xl">
+            onClick={() => setMenuOpen(!menuOpen)} className="text-2xl p-2 rounded-md hover:bg-gray-200 transition" >
             ☰
           </button>
 
-          {/* FLOATING DROPDOWN */}
+          {/* DROPDOWN */}
           {menuOpen && (
-            <div className="absolute right-0 top-full mt-3 w-max bg-white rounded-xl shadow-lg border border-gray-100 z-50">
-              <div className="flex flex-col p-2 space-y-2">{navItems.map((item) => {
-                const isActive = location.pathname === item.path;
+            <div className="absolute right-0 top-full mt-3 w-44 sm:w-52 bg-white rounded-xl shadow-lg border border-gray-100 z-50">
 
-                return (
-                  <Link
-                    key={item.name}
-                    to={item.path}
-                    onClick={() => setMenuOpen(false)}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-lg text-[14px] whitespace-nowrap
-                      ${isActive
-                        ? "bg-green-800 text-white" : "text-gray-600 hover:bg-gray-100"}`}>
-                    <span className="text-[16px]">{item.icon}</span>
-                    {item.name}
-                  </Link>
-                );
-              })}
+              <div className="flex flex-col p-2 space-y-2">
+
+                {navItems.map((item) => {
+                  const isActive = location.pathname === item.path;
+
+                  return (
+                    <Link
+                      key={item.name} to={item.path} onClick={() => setMenuOpen(false)} className={`flex items-center gap-2 px-4 py-2 rounded-lg text-[14px] whitespace-nowrap transition
+                      ${
+                        isActive ? "bg-green-800 text-white" : "text-gray-600 hover:bg-gray-100" }`}>
+                      <span className="text-[16px]">{item.icon}</span>
+                      {item.name}
+                    </Link>
+                  );
+                })}
+
               </div>
             </div>
           )}
+
         </div>
       </div>
     </div>
