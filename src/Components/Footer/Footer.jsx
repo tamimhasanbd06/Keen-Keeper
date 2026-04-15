@@ -24,22 +24,27 @@ const Footer = () => {
         <div className="flex flex-col items-center gap-4 mb-16">
           <span className="text-lg font-medium">Social Links</span>
           <div className="flex gap-4">
+
             {/* Instagram */}
             <a href="#" className="bg-white text-[#1e4637] p-2.5 rounded-full hover:bg-gray-200 transition-all">
               <FaInstagram size={20} />
             </a>
+
             {/* Facebook */}
             <a href="#" className="bg-white text-[#1e4637] p-2.5 rounded-full hover:bg-gray-200 transition-all">
               <FaFacebookF size={20} />
             </a>
+
             {/* X (Twitter) */}
             <a href="#" className="bg-white text-[#1e4637] p-2.5 rounded-full hover:bg-gray-200 transition-all">
               <RiTwitterXFill size={20} />
             </a>
+            
           </div>
         </div>
 
         {/* Bottom Bar: Responsive Layout */}
+
         <div className="w-full pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-xs md:text-sm text-gray-400">
           <p>© 2026 KeenKeeper. All rights reserved.</p>
           

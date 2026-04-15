@@ -40,8 +40,7 @@ const Friends = () => {
                   <span
                     className={`text-xs px-3 py-1 rounded-full ${getStatusStyle(
                       friend.status
-                    )}`}
- >
+                    )}`}>
                     {friend.status}
                   </span>
                 </div>

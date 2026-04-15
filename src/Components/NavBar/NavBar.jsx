@@ -38,6 +38,7 @@ const NavBar = () => {
           <span className="text-green-700 font-bold tracking-wide">Keeper</span>
         </div>
 
+
         {/* DESKTOP MENU (ONLY md and above) */}
         <div className="hidden md:flex items-center gap-2 bg-white p-1 rounded-xl shadow-sm">
           {navItems.map((item) => {
@@ -47,6 +48,7 @@ const NavBar = () => {
               <Link
                 key={item.name}
                 to={item.path}
+
                 className={`flex items-center gap-2 px-4 lg:px-5 py-2 rounded-lg text-[14px] font-medium transition-all duration-200
                 ${ isActive ? "bg-green-800 text-white shadow" : "text-gray-600 hover:bg-gray-100" }`} >
                 <span className="text-[16px]">{item.icon}</span>
