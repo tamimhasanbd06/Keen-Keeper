@@ -14,20 +14,26 @@ import App from "./App.jsx";
 import Home from "./Components/Pages/Home/Home.jsx";
 import Stats from "./Components/Pages/Stats/Stats.jsx";
 import Timeline from "./Components/Pages/Timeline/Timeline.jsx";
+import Details from "./Components/Details/Details.jsx";
+import FriendsProvider from "./FriendsContext/FriendsProvider.jsx";
+
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <TimelineProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<App />}>
-            <Route index element={<Home />} />
-            <Route path="stats" element={<Stats />} />
-            <Route path="timeline" element={<Timeline />} />
-          </Route>
-        </Routes>
-        <ToastContainer position="top-right" autoClose={2000} />
-      </BrowserRouter>
+      <FriendsProvider>   {/* ✅ FIXED */}
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<App />}>
+              <Route index element={<Home />} />
+              <Route path="stats" element={<Stats />} />
+              <Route path="timeline" element={<Timeline />} />
+              <Route path="details/:id" element={<Details />} />
+            </Route>
+          </Routes>
+          <ToastContainer position="top-right" autoClose={2000} />
+        </BrowserRouter>
+      </FriendsProvider>   
     </TimelineProvider>
   </StrictMode>
 );

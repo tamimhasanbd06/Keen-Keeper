@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaInstagram, FaFacebookF } from "react-icons/fa6";
-import { RiTwitterXFill } from "react-icons/ri"; // The most accurate X icon
+import { RiTwitterXFill } from "react-icons/ri"; 
 
 const Footer = () => {
   return (

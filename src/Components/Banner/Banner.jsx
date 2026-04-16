@@ -1,5 +1,5 @@
 import React from "react";
-import { useFriends } from "../../FriendsContext/FriendsContext";
+import { useFriends } from "../../FriendsContext/FriendsContext.jsx";
 
 const Banner = () => {
 
