@@ -1,36 +1,68 @@
-Keen Keeper
+<!-- ===================== BADGES ===================== -->
 
-Keen Keeper is a modern messaging application, similar to WhatsApp or Messenger, that allows users to seamlessly communicate with friends via text, as well as audio and video calls.
+![React](https://img.shields.io/badge/React-18+-61DAFB?style=for-the-badge&logo=react)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.0-38B2AC?style=for-the-badge&logo=tailwind-css)
+![DaisyUI](https://img.shields.io/badge/DaisyUI-UI%20Library-5A0EF8?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-In%20Development-orange?style=for-the-badge)
 
-Technologies Used
-React.js
-Tailwind CSS
-HTML
-DaisyUI
-React icon
-Lucide Icons
-React Router
-React Router DOM
-Key Features
-Text Messaging: Users can send and receive instant text messages in real time.
-Audio & Video Calls: Users can initiate and receive both audio and video calls seamlessly.
-Timeline Page: A dedicated timeline that records every interaction, showing who contacted whom, when, and the details of each action.
-Call Monitor Chart: A visual chart to monitor the frequency and quantity of audio and video calls.
-Keen Keeper
+---
 
-Keen Keeper একটি আধুনিক মেসেজিং অ্যাপ্লিকেশন, যা WhatsApp বা Messenger-এর মতো, ব্যবহারকারীদের বন্ধুদের সঙ্গে টেক্সট, অডিও ও ভিডিও কলের মাধ্যমে সহজে যোগাযোগ করার সুযোগ দেয়।
+# 💬 Keen Keeper
 
-ব্যবহৃত টেকনোলজি
-React.js
-Tailwind CSS
-HTML
-DaisyUI
-React icon
-Lucide Icons
-React Router
-React Router DOM
-মূল ফিচারসমূহ
-টেক্সট মেসেজিং: ব্যবহারকারীরা রিয়েল টাইমে তাত্ক্ষণিক টেক্সট মেসেজ পাঠাতে এবং গ্রহণ করতে পারে।
-অডিও ও ভিডিও কল: ব্যবহারকারীরা অডিও এবং ভিডিও কল সহজে শুরু এবং গ্রহণ করতে পারে।
-টাইমলাইন পেজ: একটি বিশেষ টাইমলাইন পৃষ্ঠা, যেখানে প্রতিটি ইন্টারঅ্যাকশন রেকর্ড করা হয়, কে কাকে, কখন, এবং কোন বিবরণে যোগাযোগ করেছে, সবই বিস্তারিতভাবে দেখায়।
-কল মনিটর চার্ট: অডিও ও ভিডিও কলের পরিমাণ এবং ফ্রিকোয়েন্সি মনিটর করার জন্য একটি ভিজ্যুয়াল চার্ট।
+> A modern real-time messaging application inspired by WhatsApp and Messenger, built for seamless communication through **text, audio, and video calls**.
+
+---
+
+## 🚀 Overview
+
+**Keen Keeper** is a next-generation messaging platform designed for smooth and instant communication. Users can chat in real-time, make audio and video calls, and track their communication history through advanced analytics like timelines and call monitoring charts.
+
+---
+
+## ✨ Key Features (মূল ফিচারসমূহ)
+
+### 1. 💬 Instant Text Messaging  
+- Send and receive messages in real time  
+- Smooth, responsive chat interface  
+- Reliable delivery of messages  
+
+### 2. 📞 High-Quality Audio & Video Calls  
+- Crystal-clear audio calls  
+- Seamless video call experience  
+- Quick call initiation and receiving  
+
+### 3. 🕒 Interactive Timeline  
+- Automatically records every user interaction  
+- Displays:
+  - Who contacted whom  
+  - Date and time of each communication  
+  - Detailed action log  
+
+### 4. 📊 Call Monitor Dashboard  
+- Visual analytics of call usage  
+- Compare audio vs video calls  
+- Track call frequency over time  
+
+---
+
+## 🛠️ Tech Stack
+
+| Tech | Description |
+|------|-------------|
+| ⚛️ React.js | Frontend framework |
+| 🎨 Tailwind CSS | Utility-first styling framework |
+| 🌼 DaisyUI | Pre-built UI component library |
+| 🌐 HTML | Basic structure |
+| 🔁 React Router DOM | Advanced routing system |
+| 🎯 React Icons | Icon library |
+| ✨ Lucide Icons | Modern, clean icons |
+
+---
+
+## 📸 Project Preview
+
+> Add your screenshots here
+
+```md
+![Preview](your-image-link-here)
