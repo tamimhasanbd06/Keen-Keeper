@@ -11,6 +11,10 @@ const Friends = () => {
     return "bg-green-800 text-white";
   };
 
+  const getTagStyle = () => {
+    return "bg-blue-500 text-white";
+  };
+
   if (!friends || friends.length === 0) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gray-100">
@@ -43,6 +47,18 @@ const Friends = () => {
                 {friend.days_since_contact}d ago
               </p>
 
+              <div className="flex flex-wrap justify-center gap-2 mb-2">
+                {friend.tags.map((tag, index) => (
+                  <span
+                    key={index}
+                    className={`text-[10px] px-2 py-1 rounded-full ${getTagStyle()}`}
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+
               <span
                 className={`text-xs px-3 py-1 rounded-full ${getStatusStyle(
                   friend.status
@@ -50,6 +66,7 @@ const Friends = () => {
               >
                 {friend.status}
               </span>
+
             </div>
           </Link>
         ))}

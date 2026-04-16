@@ -85,17 +85,15 @@ const Details = () => {
   return (
     <div className="bg-[#f8fafc] min-h-screen p-4 md:p-8 font-sans">
 
-      {/* BACK BUTTON (from first code, preserved properly) */}
       <Link
         to="/"
-        className="mb-4 text-sm text-gray-500 hover:text-gray-800 lg:hidden block"
-      >
+        className="mb-4 text-sm text-gray-500 hover:text-gray-800 block">
+          
         ← Back to List
       </Link>
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6">
 
-        {/* LEFT */}
         <div className="lg:col-span-4 space-y-4">
 
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 text-center">
@@ -105,17 +103,23 @@ const Details = () => {
               className="w-24 h-24 mx-auto rounded-full object-cover border-4 border-gray-50"
             />
 
-            <h2 className="text-xl font-bold text-gray-800 mt-4">
+            <h2 className="text-lg font-semibold text-gray-800 mt-3">
               {friend.name}
             </h2>
 
-            <div className="flex flex-wrap justify-center gap-2 mt-3">
-              <span className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider bg-red-500 text-white rounded-full">
-                {friend.status || "Overdue"}
+            {/* ✅ UI MATCH BADGES */}
+            <div className="flex flex-col items-center gap-2 mt-3">
+
+              {/* Main Status */}
+              <span className="px-3 py-[3px] text-[10px] font-semibold bg-red-500 text-white rounded-full">
+                {friend.status}
               </span>
-              <span className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider bg-green-100 text-green-700 rounded-full">
-                FAMILY
+
+              {/* Tag (First one only like screenshot style) */}
+              <span className="px-3 py-[3px] text-[10px] font-semibold bg-green-100 text-green-700 rounded-full">
+                {friend.tags?.[0]}
               </span>
+
             </div>
 
             <p className="text-gray-500 italic text-sm mt-4 leading-relaxed">
@@ -129,31 +133,30 @@ const Details = () => {
           <div className="space-y-2">
             <button
               onClick={() => handleAction("snooze")}
-              className="w-full flex items-center justify-center gap-3 py-3 bg-white border border-gray-100 rounded-xl text-gray-700 hover:bg-gray-50 font-medium text-sm"
-            >
+              className="w-full flex items-center justify-center gap-3 py-3 bg-white border border-gray-100 rounded-xl text-gray-700 hover:bg-gray-50 font-medium text-sm">
+
               <Bell size={18} className="text-gray-500" />
               Snooze 2 Weeks
             </button>
 
             <button
               onClick={() => handleAction("archive")}
-              className="w-full flex items-center justify-center gap-3 py-3 bg-white border border-gray-100 rounded-xl text-gray-700 hover:bg-gray-50 font-medium text-sm"
-            >
+              className="w-full flex items-center justify-center gap-3 py-3 bg-white border border-gray-100 rounded-xl text-gray-700 hover:bg-gray-50 font-medium text-sm">
+
               <Archive size={18} className="text-gray-500" />
               Archive
             </button>
 
             <button
               onClick={() => handleAction("delete")}
-              className="w-full flex items-center justify-center gap-3 py-3 bg-white border border-gray-100 rounded-xl text-red-500 hover:bg-red-50 font-medium text-sm"
-            >
+              className="w-full flex items-center justify-center gap-3 py-3 bg-white border border-gray-100 rounded-xl text-red-500 hover:bg-red-50 font-medium text-sm" >
+
               <Trash2 size={18} />
               Delete
             </button>
           </div>
         </div>
 
-        {/* RIGHT */}
         <div className="lg:col-span-8 space-y-6">
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -204,8 +207,8 @@ const Details = () => {
 
               <button
                 onClick={() => handleAction("call")}
-                className="flex flex-col items-center gap-3 p-6 bg-gray-50 rounded-2xl hover:bg-[#f0f4f8] group"
-              >
+                className="flex flex-col items-center gap-3 p-6 bg-gray-50 rounded-2xl hover:bg-[#f0f4f8] group">
+
                 <div className="p-3 bg-white rounded-full shadow-sm group-hover:scale-110">
                   <Phone size={24} />
                 </div>
@@ -214,8 +217,8 @@ const Details = () => {
 
               <button
                 onClick={() => handleAction("text")}
-                className="flex flex-col items-center gap-3 p-6 bg-gray-50 rounded-2xl hover:bg-[#f0f4f8] group"
-              >
+                className="flex flex-col items-center gap-3 p-6 bg-gray-50 rounded-2xl hover:bg-[#f0f4f8] group">
+
                 <div className="p-3 bg-white rounded-full shadow-sm group-hover:scale-110">
                   <MessageSquare size={24} />
                 </div>
@@ -224,8 +227,8 @@ const Details = () => {
 
               <button
                 onClick={() => handleAction("video")}
-                className="flex flex-col items-center gap-3 p-6 bg-gray-50 rounded-2xl hover:bg-[#f0f4f8] group"
-              >
+                className="flex flex-col items-center gap-3 p-6 bg-gray-50 rounded-2xl hover:bg-[#f0f4f8] group" 
+                  >
                 <div className="p-3 bg-white rounded-full shadow-sm group-hover:scale-110">
                   <Video size={24} />
                 </div>
